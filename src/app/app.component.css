@@ -5,7 +5,7 @@
   border:1px solid rgb(233, 223, 223);
   padding-top: 75px;
   margin-top:120px;
-  border-radius:12px;
+  border-radius:6px;
   -moz-box-shadow:    3px 3px 5px 6px #ccc;
   -webkit-box-shadow: 3px 3px 5px 6px #ccc;
   box-shadow:         3px 3px 5px 6px #ccc;
@@ -16,7 +16,7 @@ input[type=text], input[type=password] {
   width: 250px;
   padding: 12px;
   border: 1px solid gray;
-  border-radius:22px;
+  border-radius:10px;
   box-shadow: 10px 5px 5px rgb(189, 187, 187);
 }
 
@@ -31,7 +31,7 @@ input[type=submit] {
   opacity: 0.9;
   border-radius:5px;
   margin-top:16%;
-  border-radius: 22px;
+  border-radius:10px;
   margin-left:60px;
   box-shadow: 10px 5px 5px rgb(189, 187, 187);
 }
