@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 offset-md-3"><br>
+
+      <h2 class="text-center">{{ title }}</h2><br>
+
+      <form [formGroup]="myForm" (ngSubmit)="_formSubmit()">
+
+
+        <!-- EMAIL ADDRESS FIELD -->
+        <div class="form-group">
+          E-mail <input type="text" formControlName="email" class="form-control" placeholder="Email*" />
+          <div *ngIf="myForm.controls.email.invalid && myForm.controls.email.touched" class="text-danger">
+            <small *ngIf="myForm.controls.email.errors.required">Email address is required.</small>
+            <small *ngIf="myForm.controls.email.errors.email">Email must be a valid email address.</small>
+          </div>
+        </div>
+
+        <!-- PASSWORD FIELD -->
+        <div class="form-group">
+          Password <input type="password" formControlName="pwd" class="form-control" placeholder="passWord*" />
+          <div *ngIf="myForm.controls.pwd.invalid && myForm.controls.pwd.touched" class="text-danger">
+            <small *ngIf="myForm.controls.pwd.errors.required">Password is required.</small>
+            <small *ngIf="myForm.controls.pwd.errors.minlength">Password must be at least 6 characters.</small>
+          </div>
+        </div>
+
+        <!-- REGISTER BUTTON -->
+        <div class="form-group">
+          <input type="submit" value="Register" [disabled]="myForm.invalid" class="btn btn-primary" />
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>
